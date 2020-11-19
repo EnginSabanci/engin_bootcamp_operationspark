@@ -26,7 +26,7 @@ function length(string) {
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
     
-    string.toLowerCase();
+   return  string.toLowerCase();
 
 
     // YOUR CODE ABOVE HERE //
@@ -38,7 +38,7 @@ function toLowerCase(string) {
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
 
-    string.toUpperCase();
+    return string.toUpperCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -79,8 +79,11 @@ function toDashCase(string) {
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
-        return string.startsWith(string, char);
-
+    string = string.toLowerCase();
+    char = char.toLowerCase();
+    var isTrue = string.startsWith(char);
+    
+    return isTrue;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -99,7 +102,11 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-    return string.endsWith(string, char);
+    string = string.toLowerCase();
+    char = char.toLowerCase();
+    var isTrue = string.endsWith(char);
+    
+    return isTrue;
 
 
     // YOUR CODE ABOVE HERE //
@@ -167,9 +174,9 @@ function longest(stringOne, stringTwo) {
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var result;
-    if (stringOne.charAt(0) > stringTwo.charAt(0)){
+    if (stringOne < stringTwo){
         result = 1;
-    } else if (stringOne.charAt(0) < stringTwo.charAt(0)) {
+    } else if (stringOne > stringTwo) {
         result = -1;
     } else {
         result = 0;
@@ -189,9 +196,9 @@ function sortAscending(stringOne, stringTwo) {
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var result;
-    if (stringOne.charAt(0) < stringTwo.charAt(0)){
+    if (stringOne > stringTwo){
         result = 1;
-    } else if (stringOne.charAt(0) > stringTwo.charAt(0)) {
+    } else if (stringOne < stringTwo) {
         result = -1;
     } else {
         result = 0;
